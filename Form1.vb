@@ -1,14 +1,14 @@
-﻿Imports System.ComponentModel.DataAnnotations
-
-Public Class MLMSForm
+﻿Public Class MLMSForm
     Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
         MovieTitleDataGrid.Rows.Add(MovieTitleTxt.Text)
 
-        'MovieTitleTxt.Text.SendToDatabase
-        'ReleaseYearTxt.Text.SendToDatabase
-        'GenreTxt.Text.SendToDatabase
-        'DirectorTxt.Text.SendToDatabase
-        'DescriptionTxt.Text.SendToDatabase
+        ' Database stuff
+        ' TODO: Add database, then send this information to the database
+        ' MovieTitleTxt.Text.SendToDatabase
+        ' ReleaseYearTxt.Text.SendToDatabase
+        ' GenreTxt.Text.SendToDatabase
+        ' DirectorTxt.Text.SendToDatabase
+        ' DescriptionTxt.Text.SendToDatabase
     End Sub
 
     Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick
@@ -20,8 +20,15 @@ Public Class MLMSForm
         '        movieDetailsForm.ShowDialog()
         '    End If
 
+        ' Private Function GetSelectedMovie(rowIndex As Integer) As MovieDetailsForm
+        '    Dim selectedMovie As MovieDetailsForm = listOfMovies(rowIndex)
+
+        '    Return selectedMovie
+        ' End Function
+
         Dim displayForm As New MovieDetailsForm()
 
+        ' Temporary display functionality
         displayForm.MovieInfoDataGrid.Rows.Add()
         displayForm.MovieInfoDataGrid.Rows(0).Cells("MovieTitleCol").Value = MovieTitleTxt.Text
         displayForm.MovieInfoDataGrid.Rows(0).Cells("ReleaseYearCol").Value = ReleaseYearTxt.Text
@@ -30,10 +37,4 @@ Public Class MLMSForm
         displayForm.MovieInfoDataGrid.Rows(0).Cells("DescriptionCol").Value = DescriptionTxt.Text
         displayForm.Show()
     End Sub
-
-    'Private Function GetSelectedMovie(rowIndex As Integer) As MovieDetailsForm
-    '    Dim selectedMovie As MovieDetailsForm = listOfMovies(rowIndex)
-
-    '    Return selectedMovie
-    'End Function
 End Class

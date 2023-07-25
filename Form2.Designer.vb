@@ -38,7 +38,7 @@ Partial Class MovieDetailsForm
         MovieInfoDataGrid.Location = New Point(12, 12)
         MovieInfoDataGrid.Name = "MovieInfoDataGrid"
         MovieInfoDataGrid.RowTemplate.Height = 25
-        MovieInfoDataGrid.Size = New Size(843, 150)
+        MovieInfoDataGrid.Size = New Size(1243, 150)
         MovieInfoDataGrid.TabIndex = 0
         ' 
         ' MovieTitleCol
@@ -69,13 +69,13 @@ Partial Class MovieDetailsForm
         ' 
         DescriptionCol.HeaderText = "Description"
         DescriptionCol.Name = "DescriptionCol"
-        DescriptionCol.Width = 300
+        DescriptionCol.Width = 700
         ' 
         ' MovieDetailsForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(868, 176)
+        ClientSize = New Size(1266, 176)
         Controls.Add(MovieInfoDataGrid)
         Name = "MovieDetailsForm"
         Text = "Movie Details"

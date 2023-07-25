@@ -40,35 +40,35 @@ Partial Class MLMSForm
         ' 
         ' MovieTitleTxt
         ' 
-        MovieTitleTxt.Location = New Point(493, 15)
+        MovieTitleTxt.Location = New Point(92, 12)
         MovieTitleTxt.Name = "MovieTitleTxt"
         MovieTitleTxt.Size = New Size(100, 23)
         MovieTitleTxt.TabIndex = 0
         ' 
         ' ReleaseYearTxt
         ' 
-        ReleaseYearTxt.Location = New Point(493, 44)
+        ReleaseYearTxt.Location = New Point(92, 41)
         ReleaseYearTxt.Name = "ReleaseYearTxt"
         ReleaseYearTxt.Size = New Size(100, 23)
         ReleaseYearTxt.TabIndex = 1
         ' 
         ' GenreTxt
         ' 
-        GenreTxt.Location = New Point(493, 73)
+        GenreTxt.Location = New Point(92, 70)
         GenreTxt.Name = "GenreTxt"
         GenreTxt.Size = New Size(100, 23)
         GenreTxt.TabIndex = 2
         ' 
         ' DirectorTxt
         ' 
-        DirectorTxt.Location = New Point(493, 102)
+        DirectorTxt.Location = New Point(92, 99)
         DirectorTxt.Name = "DirectorTxt"
         DirectorTxt.Size = New Size(100, 23)
         DirectorTxt.TabIndex = 3
         ' 
         ' DescriptionTxt
         ' 
-        DescriptionTxt.Location = New Point(493, 131)
+        DescriptionTxt.Location = New Point(92, 128)
         DescriptionTxt.Name = "DescriptionTxt"
         DescriptionTxt.Size = New Size(100, 23)
         DescriptionTxt.TabIndex = 4
@@ -76,57 +76,57 @@ Partial Class MLMSForm
         ' MovieTitleLbl
         ' 
         MovieTitleLbl.AutoSize = True
-        MovieTitleLbl.Location = New Point(422, 18)
+        MovieTitleLbl.Location = New Point(21, 15)
         MovieTitleLbl.Name = "MovieTitleLbl"
         MovieTitleLbl.Size = New Size(65, 15)
-        MovieTitleLbl.TabIndex = 6
+        MovieTitleLbl.TabIndex = 7
         MovieTitleLbl.Text = "Movie Title"
         ' 
         ' ReleaseYearLbl
         ' 
         ReleaseYearLbl.AutoSize = True
-        ReleaseYearLbl.Location = New Point(416, 47)
+        ReleaseYearLbl.Location = New Point(15, 44)
         ReleaseYearLbl.Name = "ReleaseYearLbl"
         ReleaseYearLbl.Size = New Size(71, 15)
-        ReleaseYearLbl.TabIndex = 7
+        ReleaseYearLbl.TabIndex = 8
         ReleaseYearLbl.Text = "Release Year"
         ' 
         ' GenreLbl
         ' 
         GenreLbl.AutoSize = True
-        GenreLbl.Location = New Point(446, 76)
+        GenreLbl.Location = New Point(45, 73)
         GenreLbl.Name = "GenreLbl"
         GenreLbl.Size = New Size(38, 15)
-        GenreLbl.TabIndex = 8
+        GenreLbl.TabIndex = 9
         GenreLbl.Text = "Genre"
         ' 
         ' DirectorLbl
         ' 
         DirectorLbl.AutoSize = True
-        DirectorLbl.Location = New Point(435, 105)
+        DirectorLbl.Location = New Point(34, 102)
         DirectorLbl.Name = "DirectorLbl"
         DirectorLbl.Size = New Size(49, 15)
-        DirectorLbl.TabIndex = 9
+        DirectorLbl.TabIndex = 10
         DirectorLbl.Text = "Director"
         ' 
         ' DescriptionLbl
         ' 
         DescriptionLbl.AutoSize = True
-        DescriptionLbl.Location = New Point(420, 134)
+        DescriptionLbl.Location = New Point(19, 131)
         DescriptionLbl.Name = "DescriptionLbl"
         DescriptionLbl.Size = New Size(67, 15)
-        DescriptionLbl.TabIndex = 10
+        DescriptionLbl.TabIndex = 11
         DescriptionLbl.Text = "Description"
         ' 
         ' MovieTitleDataGrid
         ' 
         MovieTitleDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         MovieTitleDataGrid.Columns.AddRange(New DataGridViewColumn() {MovieTitleCol})
-        MovieTitleDataGrid.Location = New Point(12, 15)
+        MovieTitleDataGrid.Location = New Point(279, 12)
         MovieTitleDataGrid.Name = "MovieTitleDataGrid"
         MovieTitleDataGrid.RowTemplate.Height = 25
         MovieTitleDataGrid.Size = New Size(394, 139)
-        MovieTitleDataGrid.TabIndex = 11
+        MovieTitleDataGrid.TabIndex = 6
         ' 
         ' MovieTitleCol
         ' 
@@ -136,10 +136,10 @@ Partial Class MLMSForm
         ' 
         ' AddMovieBtn
         ' 
-        AddMovieBtn.Location = New Point(599, 15)
+        AddMovieBtn.Location = New Point(198, 12)
         AddMovieBtn.Name = "AddMovieBtn"
         AddMovieBtn.Size = New Size(75, 139)
-        AddMovieBtn.TabIndex = 12
+        AddMovieBtn.TabIndex = 5
         AddMovieBtn.Text = "Add Movie"
         AddMovieBtn.UseVisualStyleBackColor = True
         ' 

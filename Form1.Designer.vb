@@ -22,11 +22,11 @@ Partial Class MLMSForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
+        MovieTitleTxt = New TextBox()
+        ReleaseYearTxt = New TextBox()
+        GenreTxt = New TextBox()
+        DirectorTxt = New TextBox()
+        DescriptionTxt = New TextBox()
         MovieTitleLbl = New Label()
         ReleaseYearLbl = New Label()
         GenreLbl = New Label()
@@ -38,40 +38,40 @@ Partial Class MLMSForm
         CType(MovieTitleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' MovieTitleTxt
         ' 
-        TextBox1.Location = New Point(493, 15)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(100, 23)
-        TextBox1.TabIndex = 0
+        MovieTitleTxt.Location = New Point(493, 15)
+        MovieTitleTxt.Name = "MovieTitleTxt"
+        MovieTitleTxt.Size = New Size(100, 23)
+        MovieTitleTxt.TabIndex = 0
         ' 
-        ' TextBox2
+        ' ReleaseYearTxt
         ' 
-        TextBox2.Location = New Point(493, 44)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(100, 23)
-        TextBox2.TabIndex = 1
+        ReleaseYearTxt.Location = New Point(493, 44)
+        ReleaseYearTxt.Name = "ReleaseYearTxt"
+        ReleaseYearTxt.Size = New Size(100, 23)
+        ReleaseYearTxt.TabIndex = 1
         ' 
-        ' TextBox3
+        ' GenreTxt
         ' 
-        TextBox3.Location = New Point(493, 73)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(100, 23)
-        TextBox3.TabIndex = 2
+        GenreTxt.Location = New Point(493, 73)
+        GenreTxt.Name = "GenreTxt"
+        GenreTxt.Size = New Size(100, 23)
+        GenreTxt.TabIndex = 2
         ' 
-        ' TextBox4
+        ' DirectorTxt
         ' 
-        TextBox4.Location = New Point(493, 102)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(100, 23)
-        TextBox4.TabIndex = 3
+        DirectorTxt.Location = New Point(493, 102)
+        DirectorTxt.Name = "DirectorTxt"
+        DirectorTxt.Size = New Size(100, 23)
+        DirectorTxt.TabIndex = 3
         ' 
-        ' TextBox5
+        ' DescriptionTxt
         ' 
-        TextBox5.Location = New Point(493, 131)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(100, 23)
-        TextBox5.TabIndex = 4
+        DescriptionTxt.Location = New Point(493, 131)
+        DescriptionTxt.Name = "DescriptionTxt"
+        DescriptionTxt.Size = New Size(100, 23)
+        DescriptionTxt.TabIndex = 4
         ' 
         ' MovieTitleLbl
         ' 
@@ -155,11 +155,11 @@ Partial Class MLMSForm
         Controls.Add(GenreLbl)
         Controls.Add(ReleaseYearLbl)
         Controls.Add(MovieTitleLbl)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(DescriptionTxt)
+        Controls.Add(DirectorTxt)
+        Controls.Add(GenreTxt)
+        Controls.Add(ReleaseYearTxt)
+        Controls.Add(MovieTitleTxt)
         Name = "MLMSForm"
         Text = "Movie Library Management System"
         CType(MovieTitleDataGrid, ComponentModel.ISupportInitialize).EndInit()
@@ -167,11 +167,11 @@ Partial Class MLMSForm
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents MovieTitleTxt As TextBox
+    Friend WithEvents ReleaseYearTxt As TextBox
+    Friend WithEvents GenreTxt As TextBox
+    Friend WithEvents DirectorTxt As TextBox
+    Friend WithEvents DescriptionTxt As TextBox
     Friend WithEvents MovieTitleLbl As Label
     Friend WithEvents ReleaseYearLbl As Label
     Friend WithEvents GenreLbl As Label

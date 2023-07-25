@@ -3,6 +3,10 @@
 
     End Sub
 
+    Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
+
+    End Sub
+
     'Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick
     '    If e.RowIndex >= 1 Then
     '        Dim selectedMovie As Movie = GetSelectedMovie(e.RowIndex)

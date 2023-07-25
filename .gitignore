@@ -1,0 +1,62 @@
+# Visual Studio / Windows specific files
+[Bb]in/
+[Oo]bj/
+*.suo
+*.user
+*.userprefs
+*.vs/
+*.vscode/
+*.sln.docstates
+*.sln.ide-wal
+*.sln.ide-wal2
+*.ncb
+*.sdf
+*.vcxproj.*
+*._proj.user
+*.VC.db
+[Tt]humbs.db
+*.DS_Store
+*.ipch/
+*.vbw
+*.publish.xml
+*.publish/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Compiled files
+*.exe
+*.dll
+*.pdb
+*.lib
+*.exp
+*.tlb
+
+# Debug files
+*.apk
+*.ap_
+*.so
+*.zip
+*.rar
+*.tar.gz
+*.7z
+*.dSYM/
+*.ipa
+*.dsym.zip
+*.dmg
+*.app
+
+# Logs and temporary files
+*.log
+*.cache
+*.log.*
+*.tmp
+
+# ReSharper specific
+*.ReSharper*
+*.DotSettings.user
+
+# Local history from JetBrains IDEs
+.idea/
+*.ide

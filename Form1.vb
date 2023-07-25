@@ -1,10 +1,12 @@
 ﻿Public Class MLMSForm
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
+        MovieTitleDataGrid.Rows.Add(MovieTitleTxt.Text)
 
+        'MovieTitleTxt.Text.SendToDatabase
+        'ReleaseYearTxt.Text.SendToDatabase
+        'GenreTxt.Text.SendToDatabase
+        'DirectorTxt.Text.SendToDatabase
+        'DescriptionTxt.Text.SendToDatabase
     End Sub
 
     'Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick

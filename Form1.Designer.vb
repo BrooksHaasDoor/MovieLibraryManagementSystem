@@ -123,11 +123,13 @@ Partial Class MLMSForm
         ' 
         ' MovieTitleDataGrid
         ' 
+        MovieTitleDataGrid.AllowUserToAddRows = False
         MovieTitleDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         MovieTitleDataGrid.Columns.AddRange(New DataGridViewColumn() {MovieTitleCol})
         MovieTitleDataGrid.Location = New Point(279, 12)
         MovieTitleDataGrid.Name = "MovieTitleDataGrid"
-        MovieTitleDataGrid.RowTemplate.Height = 25
+        MovieTitleDataGrid.RowTemplate.Height = 28
+        MovieTitleDataGrid.RowTemplate.ReadOnly = True
         MovieTitleDataGrid.Size = New Size(394, 168)
         MovieTitleDataGrid.TabIndex = 8
         ' 

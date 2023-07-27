@@ -8,11 +8,31 @@
     Dim movieTitleList As New List(Of Object)
 
     Private Sub MLMSForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AddMovie("Barbie", "2023", "Adventure/Comedy/Fantasy", "Greta Gerwig", "Barbie suffers a crisis that leads her to question her world and her existence.")
-        AddMovie("The Shawshank Redemption", "1994", "Drama", "Frank Darabont", "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.")
-        AddMovie("The Godfather", "1972", "Crime/Drama", "Francis Ford Coppola", "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.")
-        AddMovie("The Lord of the Rings: The Fellowship of the Ring", "2001", "Action/Adventure/Drama", "Peter Jackson", "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.")
-        AddMovie("Spider-Man: Across the Spiderverse", "2023", "Animation/Action/Adventure", "Joaquim Dos Santos/Kemp Powers/Justin K. Thompson", "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.")
+        AddMovie("Barbie",
+                 "2023",
+                 "Adventure/Comedy/Fantasy",
+                 "Greta Gerwig",
+                 "Barbie suffers a crisis that leads her to question her world and her existence.")
+        AddMovie("The Shawshank Redemption",
+                 "1994",
+                 "Drama",
+                 "Frank Darabont",
+                 "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.")
+        AddMovie("The Godfather",
+                 "1972",
+                 "Crime/Drama",
+                 "Francis Ford Coppola",
+                 "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.")
+        AddMovie("The Lord of the Rings: The Fellowship of the Ring",
+                 "2001",
+                 "Action/Adventure/Drama",
+                 "Peter Jackson",
+                 "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.")
+        AddMovie("Spider-Man: Across the Spiderverse",
+                 "2023",
+                 "Animation/Action/Adventure",
+                 "Joaquim Dos Santos/Kemp Powers/Justin K. Thompson",
+                 "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.")
     End Sub
 
     Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
@@ -20,8 +40,7 @@
         ResetInputs()
     End Sub
 
-    Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick
-        ' Get the value of the selected cell and display it
+    Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellClick
         DisplayMovieList(MovieTitleDataGrid.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
     End Sub
 
@@ -45,10 +64,7 @@
     End Sub
 
     Private Function CreateNewMovie(mov, rel, gen, dir, des)
-        ' Create a list of movie details
-        Dim newList As New List(Of String) From {mov, rel, gen, dir, des}
-
-        Return newList
+        Return New List(Of String) From {mov, rel, gen, dir, des}
     End Function
 
     Private Sub DisplayMovieList(selectedMovie)
@@ -76,6 +92,14 @@
         ResetGlobalVariables()
     End Sub
 
+    Private Function GetDisplayMessage() As String
+        Return $"Movie Title: {movieTitle}" & vbCrLf & vbCrLf &
+               $"Release Year: {releaseYear}" & vbCrLf & vbCrLf &
+               $"Genre(s): {genre}" & vbCrLf & vbCrLf &
+               $"Director(s): {director}" & vbCrLf & vbCrLf &
+               $"Description: {description}"
+    End Function
+
     Private Sub ResetGlobalVariables()
         ' Set global variable values to empty strings
         movieTitle = ""
@@ -93,8 +117,4 @@
         DirectorTxt.Text = ""
         DescriptionTxt.Text = ""
     End Sub
-
-    Private Function GetDisplayMessage() As String
-        Return $"Movie Title: {movieTitle}" & vbCrLf & $"Release Year: {releaseYear}" & vbCrLf & $"Genre: {genre}" & vbCrLf & $"Director: {director}" & vbCrLf & $"Description: {description}"
-    End Function
 End Class

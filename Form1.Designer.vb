@@ -82,7 +82,7 @@ Partial Class MLMSForm
         MovieTitleLbl.Location = New Point(21, 15)
         MovieTitleLbl.Name = "MovieTitleLbl"
         MovieTitleLbl.Size = New Size(65, 15)
-        MovieTitleLbl.TabIndex = 7
+        MovieTitleLbl.TabIndex = 9
         MovieTitleLbl.Text = "Movie Title"
         ' 
         ' ReleaseYearLbl
@@ -91,7 +91,7 @@ Partial Class MLMSForm
         ReleaseYearLbl.Location = New Point(15, 44)
         ReleaseYearLbl.Name = "ReleaseYearLbl"
         ReleaseYearLbl.Size = New Size(71, 15)
-        ReleaseYearLbl.TabIndex = 8
+        ReleaseYearLbl.TabIndex = 10
         ReleaseYearLbl.Text = "Release Year"
         ' 
         ' GenreLbl
@@ -100,7 +100,7 @@ Partial Class MLMSForm
         GenreLbl.Location = New Point(45, 73)
         GenreLbl.Name = "GenreLbl"
         GenreLbl.Size = New Size(38, 15)
-        GenreLbl.TabIndex = 9
+        GenreLbl.TabIndex = 11
         GenreLbl.Text = "Genre"
         ' 
         ' DirectorLbl
@@ -109,7 +109,7 @@ Partial Class MLMSForm
         DirectorLbl.Location = New Point(34, 102)
         DirectorLbl.Name = "DirectorLbl"
         DirectorLbl.Size = New Size(49, 15)
-        DirectorLbl.TabIndex = 10
+        DirectorLbl.TabIndex = 12
         DirectorLbl.Text = "Director"
         ' 
         ' DescriptionLbl
@@ -118,7 +118,7 @@ Partial Class MLMSForm
         DescriptionLbl.Location = New Point(19, 131)
         DescriptionLbl.Name = "DescriptionLbl"
         DescriptionLbl.Size = New Size(67, 15)
-        DescriptionLbl.TabIndex = 11
+        DescriptionLbl.TabIndex = 13
         DescriptionLbl.Text = "Description"
         ' 
         ' MovieTitleDataGrid
@@ -128,8 +128,8 @@ Partial Class MLMSForm
         MovieTitleDataGrid.Location = New Point(279, 12)
         MovieTitleDataGrid.Name = "MovieTitleDataGrid"
         MovieTitleDataGrid.RowTemplate.Height = 25
-        MovieTitleDataGrid.Size = New Size(394, 139)
-        MovieTitleDataGrid.TabIndex = 6
+        MovieTitleDataGrid.Size = New Size(394, 168)
+        MovieTitleDataGrid.TabIndex = 8
         ' 
         ' MovieTitleCol
         ' 
@@ -148,10 +148,10 @@ Partial Class MLMSForm
         ' 
         ' SearchBtn
         ' 
-        SearchBtn.Location = New Point(290, 157)
+        SearchBtn.Location = New Point(198, 157)
         SearchBtn.Name = "SearchBtn"
         SearchBtn.Size = New Size(75, 23)
-        SearchBtn.TabIndex = 18
+        SearchBtn.TabIndex = 7
         SearchBtn.Text = "Search"
         SearchBtn.UseVisualStyleBackColor = True
         ' 
@@ -161,15 +161,15 @@ Partial Class MLMSForm
         SearchLbl.Location = New Point(41, 160)
         SearchLbl.Name = "SearchLbl"
         SearchLbl.Size = New Size(42, 15)
-        SearchLbl.TabIndex = 17
+        SearchLbl.TabIndex = 14
         SearchLbl.Text = "Search"
         ' 
         ' SearchTxt
         ' 
         SearchTxt.Location = New Point(92, 157)
         SearchTxt.Name = "SearchTxt"
-        SearchTxt.Size = New Size(192, 23)
-        SearchTxt.TabIndex = 16
+        SearchTxt.Size = New Size(100, 23)
+        SearchTxt.TabIndex = 6
         ' 
         ' MLMSForm
         ' 

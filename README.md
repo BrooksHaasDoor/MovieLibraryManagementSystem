@@ -6,7 +6,7 @@
 
 ✅ Movie List Display: Display the list of movies in a DataGridView control, showing essential information like movie title and release year.
 
-✅ Movie Details: When a user clicks on a movie in the DataGridView, display the movie's full details in a separate form. This form should show all the information entered during movie entry.
+✅ Movie Details: When a user clicks on a movie in the MessageBox, display the movie's full details in a separate form. This form should show all the information entered during movie entry.
 
 Search Functionality: Implement a search bar that allows users to search for movies by title, genre, or director. Display the search results in the DataGridView.
 

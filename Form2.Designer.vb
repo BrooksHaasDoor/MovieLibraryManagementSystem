@@ -75,7 +75,7 @@ Partial Class MovieDetailsForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1266, 176)
+        ClientSize = New Size(1266, 175)
         Controls.Add(MovieInfoDataGrid)
         Name = "MovieDetailsForm"
         Text = "Movie Details"

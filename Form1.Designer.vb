@@ -35,6 +35,9 @@ Partial Class MLMSForm
         MovieTitleDataGrid = New DataGridView()
         MovieTitleCol = New DataGridViewTextBoxColumn()
         AddMovieBtn = New Button()
+        SearchBtn = New Button()
+        SearchLbl = New Label()
+        SearchTxt = New TextBox()
         CType(MovieTitleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -143,11 +146,39 @@ Partial Class MLMSForm
         AddMovieBtn.Text = "Add Movie"
         AddMovieBtn.UseVisualStyleBackColor = True
         ' 
+        ' SearchBtn
+        ' 
+        SearchBtn.Location = New Point(290, 157)
+        SearchBtn.Name = "SearchBtn"
+        SearchBtn.Size = New Size(75, 23)
+        SearchBtn.TabIndex = 18
+        SearchBtn.Text = "Search"
+        SearchBtn.UseVisualStyleBackColor = True
+        ' 
+        ' SearchLbl
+        ' 
+        SearchLbl.AutoSize = True
+        SearchLbl.Location = New Point(41, 160)
+        SearchLbl.Name = "SearchLbl"
+        SearchLbl.Size = New Size(42, 15)
+        SearchLbl.TabIndex = 17
+        SearchLbl.Text = "Search"
+        ' 
+        ' SearchTxt
+        ' 
+        SearchTxt.Location = New Point(92, 157)
+        SearchTxt.Name = "SearchTxt"
+        SearchTxt.Size = New Size(192, 23)
+        SearchTxt.TabIndex = 16
+        ' 
         ' MLMSForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(685, 170)
+        ClientSize = New Size(685, 192)
+        Controls.Add(SearchBtn)
+        Controls.Add(SearchLbl)
+        Controls.Add(SearchTxt)
         Controls.Add(AddMovieBtn)
         Controls.Add(MovieTitleDataGrid)
         Controls.Add(DescriptionLbl)
@@ -180,4 +211,7 @@ Partial Class MLMSForm
     Friend WithEvents MovieTitleDataGrid As DataGridView
     Friend WithEvents AddMovieBtn As Button
     Friend WithEvents MovieTitleCol As DataGridViewTextBoxColumn
+    Friend WithEvents SearchBtn As Button
+    Friend WithEvents SearchLbl As Label
+    Friend WithEvents SearchTxt As TextBox
 End Class

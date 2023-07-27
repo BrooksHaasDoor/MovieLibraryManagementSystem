@@ -13,14 +13,10 @@
     End Sub
 
     Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick
-        ' Get the movie that was selected
-        Dim clickedMovie As Object = MovieTitleDataGrid.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
-
-        DisplayMovieList(clickedMovie)
+        ' Get the value of the selected cell and display it
+        DisplayMovieList(MovieTitleDataGrid.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
     End Sub
     Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
-        Dim searchTerm As String = SearchTxt.Text
-
         ' Check if there is any data in MovieTitleDataGrid
         If MovieTitleDataGrid.Rows.Count = 0 Then
             ' Inform the user there are no movies saved
@@ -28,10 +24,11 @@
             Exit Sub
         End If
 
-        DisplayMovieList(searchTerm)
+        DisplayMovieList(SearchTxt.Text)
     End Sub
 
     Private Function CreateNewMovie(mov, rel, gen, dir, des)
+        ' Create a list of movie details
         Dim newList As New List(Of String) From {
                 mov,
                 rel,
@@ -61,9 +58,12 @@
             End If
         Next
 
-        ' Display the movie details
-        MessageBox.Show(GetDisplayMessage())
+        If (movieTitle = "" AndAlso releaseYear = "" AndAlso genre = "" AndAlso director = "" AndAlso description = "") Then
+            MessageBox.Show("There are no movies with that title.")
+            Exit Sub
+        End If
 
+        MessageBox.Show(GetDisplayMessage())
         ResetGlobalVariables()
     End Sub
 
@@ -76,6 +76,7 @@
     End Sub
 
     Private Sub ResetGlobalVariables()
+        ' Set globals to empty strings
         movieTitle = ""
         releaseYear = ""
         genre = ""
@@ -84,6 +85,7 @@
     End Sub
 
     Private Sub ResetInputs()
+        ' Set inputs to empty strings
         MovieTitleTxt.Text = ""
         ReleaseYearTxt.Text = ""
         GenreTxt.Text = ""

@@ -8,7 +8,7 @@
 
 ✅ Movie Details: When a user clicks on a movie in the MessageBox, display the movie's full details in a separate form. This form should show all the information entered during movie entry.
 
-Search Functionality: Implement a search bar that allows users to search for movies by title, genre, or director. Display the search results in the DataGridView.
+✅ Search Functionality: Implement a search bar that allows users to search for movies by title. Display the search results in the DataGridView.
 
 Edit and Delete Functionality: Enable users to edit and update the movie information and also delete movies from the library.
 

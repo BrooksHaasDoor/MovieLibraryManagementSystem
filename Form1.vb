@@ -1,68 +1,98 @@
 ﻿Public Class MLMSForm
-    Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
-        MovieTitleDataGrid.Rows.Add(MovieTitleTxt.Text)
+    ' Global variables
+    Dim movieTitle As String = ""
+    Dim releaseYear As String = ""
+    Dim genre As String = ""
+    Dim director As String = ""
+    Dim description As String = ""
+    Dim movieTitleList As New List(Of Object)
 
-        ' Database stuff
-        ' TODO: Add database, then send this information to the database
-        ' MovieTitleTxt.Text.SendToDatabase
-        ' ReleaseYearTxt.Text.SendToDatabase
-        ' GenreTxt.Text.SendToDatabase
-        ' DirectorTxt.Text.SendToDatabase
-        ' DescriptionTxt.Text.SendToDatabase
+    Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
+        AddMovie($"{MovieTitleTxt.Text}", $"{ReleaseYearTxt.Text}", $"{GenreTxt.Text}", $"{DirectorTxt.Text}", $"{DescriptionTxt.Text}")
+        ResetInputs()
     End Sub
 
     Private Sub MovieTitleDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MovieTitleDataGrid.CellContentClick
-        Dim movieTitle As String = $"{MovieTitleTxt.Text}"
-        Dim releaseYear As String = $"{ReleaseYearTxt.Text}"
-        Dim genre As String = $"{GenreTxt.Text}"
-        Dim director As String = $"{DirectorTxt.Text}"
-        Dim description As String = $"{DescriptionTxt.Text}"
-        Dim movieString As String = ""
+        ' Get the movie that was selected
+        Dim clickedMovie As Object = MovieTitleDataGrid.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
 
-        '    Database stuff
-        '    If e.RowIndex >= 1 Then
-        '        Dim selectedMovie As Movie = GetSelectedMovie(e.RowIndex)
-        '        Dim movieDetailsForm As New MovieDetailsForm(selectedMovie)
-
-        '        movieDetailsForm.ShowDialog()
-        '    End If
-
-        ' Private Function GetSelectedMovie(rowIndex As Integer) As MovieDetailsForm
-        '    Dim selectedMovie As MovieDetailsForm = listOfMovies(rowIndex)
-
-        '    Return selectedMovie
-        ' End Function
-
-        ' Temporary display functionality
-        movieString = $"Movie Title: {movieTitle}" & vbCrLf & $"Release Year: {releaseYear}" & vbCrLf & $"Genre: {genre}" & vbCrLf & $"Director: {director}" & vbCrLf & $"Description: {description}"
-        MessageBox.Show(movieString)
+        DisplayMovieList(clickedMovie)
     End Sub
     Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
-        AccessDataInRows()
-    End Sub
+        Dim searchTerm As String = SearchTxt.Text
 
-    Private Sub AccessDataInRows()
-        ' Check if there is any data in the DataGrid
+        ' Check if there is any data in MovieTitleDataGrid
         If MovieTitleDataGrid.Rows.Count = 0 Then
-            MessageBox.Show("No data in the DataGrid.")
+            ' Inform the user there are no movies saved
+            MessageBox.Show("There are no movies saved.")
             Exit Sub
         End If
 
-        ' Loop through each row in the DataGrid
-        For Each row As DataGridViewRow In MovieTitleDataGrid.Rows
-            ' Check if the current row is a data row (not the NewRow at the end)
-            If Not row.IsNewRow Then
-                ' Access data in each cell of the current row
-                Dim movieTitle As String = row.Cells("MovieTitleCol").Value
-                Dim releaseYear As String = row.Cells("ReleaseYearCol").Value
-                Dim genre As String = row.Cells("GenreCol").Value
-                Dim director As String = row.Cells("DirectorCol").Value
-                Dim description As String = row.Cells("DescriptionCol").Value
+        DisplayMovieList(searchTerm)
+    End Sub
 
-                Dim infoString As String = $"Movie Title: {movieTitle}" & vbCrLf & $"Release Year: {releaseYear}" & vbCrLf & $"Genre: {genre}" & vbCrLf & $"Director: {director}" & vbCrLf & $"Description: {description}"
+    Private Function CreateNewMovie(mov, rel, gen, dir, des)
+        Dim newList As New List(Of String) From {
+                mov,
+                rel,
+                gen,
+                dir,
+                des
+            }
 
-                MessageBox.Show(infoString)
+        Return newList
+    End Function
+
+    Private Function GetDisplayMessage() As String
+        Return $"Movie Title: {movieTitle}" & vbCrLf & $"Release Year: {releaseYear}" & vbCrLf & $"Genre: {genre}" & vbCrLf & $"Director: {director}" & vbCrLf & $"Description: {description}"
+    End Function
+
+    Private Sub DisplayMovieList(selectedMovie)
+        ' Loop through movie titles
+        For Each movie As List(Of String) In movieTitleList
+            ' If the current movie is the selected movie,
+            ' then assign global variables to their respective values
+            If movie(0) = selectedMovie Then
+                movieTitle = movie(0)
+                releaseYear = movie(1)
+                genre = movie(2)
+                director = movie(3)
+                description = movie(4)
             End If
         Next
+
+        ' Display the movie details
+        MessageBox.Show(GetDisplayMessage())
+
+        ResetGlobalVariables()
+    End Sub
+
+    Private Sub AddMovie(mov, rel, gen, dir, des)
+        ' Create and add a new movie to movieTitleList
+        movieTitleList.Add(CreateNewMovie(mov, rel, gen, dir, des))
+
+        ' Create a new row with value of movieTitle
+        MovieTitleDataGrid.Rows.Add($"{mov}")
+    End Sub
+
+    Private Sub ResetGlobalVariables()
+        movieTitle = ""
+        releaseYear = ""
+        genre = ""
+        director = ""
+        description = ""
+    End Sub
+
+    Private Sub ResetInputs()
+        MovieTitleTxt.Text = ""
+        ReleaseYearTxt.Text = ""
+        GenreTxt.Text = ""
+        DirectorTxt.Text = ""
+        DescriptionTxt.Text = ""
+    End Sub
+
+    Private Sub MLMSForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AddMovie("Barbie", 2023, "Adventure/Comedy/Fantasy", "Greta Gerwig", "Barbie suffers a crisis that leads her to question her world and her existence.")
+        AddMovie("The Shawshank Redemption", 1994, "Drama", "Frank Darabont", "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.")
     End Sub
 End Class

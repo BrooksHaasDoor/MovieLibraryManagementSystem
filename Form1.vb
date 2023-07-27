@@ -18,7 +18,6 @@
         Dim director As String = $"{DirectorTxt.Text}"
         Dim description As String = $"{DescriptionTxt.Text}"
         Dim movieString As String = ""
-        Dim displayForm As New MovieDetailsForm()
 
         '    Database stuff
         '    If e.RowIndex >= 1 Then

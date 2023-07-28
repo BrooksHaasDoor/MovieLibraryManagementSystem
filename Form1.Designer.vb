@@ -23,7 +23,6 @@ Partial Class MLMSForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         MovieTitleTxt = New TextBox()
-        ReleaseYearTxt = New TextBox()
         GenreTxt = New TextBox()
         DirectorTxt = New TextBox()
         DescriptionTxt = New TextBox()
@@ -38,6 +37,7 @@ Partial Class MLMSForm
         SearchBtn = New Button()
         SearchLbl = New Label()
         SearchTxt = New TextBox()
+        ReleaseDateTime = New DateTimePicker()
         CType(MovieTitleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -47,13 +47,6 @@ Partial Class MLMSForm
         MovieTitleTxt.Name = "MovieTitleTxt"
         MovieTitleTxt.Size = New Size(100, 23)
         MovieTitleTxt.TabIndex = 0
-        ' 
-        ' ReleaseYearTxt
-        ' 
-        ReleaseYearTxt.Location = New Point(92, 41)
-        ReleaseYearTxt.Name = "ReleaseYearTxt"
-        ReleaseYearTxt.Size = New Size(100, 23)
-        ReleaseYearTxt.TabIndex = 1
         ' 
         ' GenreTxt
         ' 
@@ -173,11 +166,21 @@ Partial Class MLMSForm
         SearchTxt.Size = New Size(100, 23)
         SearchTxt.TabIndex = 6
         ' 
+        ' ReleaseDateTime
+        ' 
+        ReleaseDateTime.CustomFormat = "yyyy"
+        ReleaseDateTime.Format = DateTimePickerFormat.Custom
+        ReleaseDateTime.Location = New Point(92, 41)
+        ReleaseDateTime.Name = "ReleaseDateTime"
+        ReleaseDateTime.Size = New Size(100, 23)
+        ReleaseDateTime.TabIndex = 15
+        ' 
         ' MLMSForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(685, 192)
+        Controls.Add(ReleaseDateTime)
         Controls.Add(SearchBtn)
         Controls.Add(SearchLbl)
         Controls.Add(SearchTxt)
@@ -191,7 +194,6 @@ Partial Class MLMSForm
         Controls.Add(DescriptionTxt)
         Controls.Add(DirectorTxt)
         Controls.Add(GenreTxt)
-        Controls.Add(ReleaseYearTxt)
         Controls.Add(MovieTitleTxt)
         Name = "MLMSForm"
         Text = "Movie Library Management System"
@@ -201,7 +203,6 @@ Partial Class MLMSForm
     End Sub
 
     Friend WithEvents MovieTitleTxt As TextBox
-    Friend WithEvents ReleaseYearTxt As TextBox
     Friend WithEvents GenreTxt As TextBox
     Friend WithEvents DirectorTxt As TextBox
     Friend WithEvents DescriptionTxt As TextBox
@@ -216,4 +217,5 @@ Partial Class MLMSForm
     Friend WithEvents SearchBtn As Button
     Friend WithEvents SearchLbl As Label
     Friend WithEvents SearchTxt As TextBox
+    Friend WithEvents ReleaseDateTime As DateTimePicker
 End Class

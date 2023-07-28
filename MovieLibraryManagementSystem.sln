@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MovieLibraryManagementSystem", "MovieLibraryManagementSystem.vbproj", "{2FCF7B54-C8FA-4788-B4BE-2D4E0C39704D}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "MovieLibraryManagementSystem", "MovieLibraryManagementSystem.vbproj", "{2FCF7B54-C8FA-4788-B4BE-2D4E0C39704D}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "hdPlumbing", "..\..\core\Core_Libraries\hdPlumbing\hdPlumbing.vbproj", "{B03D20C1-9AA3-45EC-B44D-617C9ED64538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2FCF7B54-C8FA-4788-B4BE-2D4E0C39704D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FCF7B54-C8FA-4788-B4BE-2D4E0C39704D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FCF7B54-C8FA-4788-B4BE-2D4E0C39704D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03D20C1-9AA3-45EC-B44D-617C9ED64538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03D20C1-9AA3-45EC-B44D-617C9ED64538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03D20C1-9AA3-45EC-B44D-617C9ED64538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03D20C1-9AA3-45EC-B44D-617C9ED64538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

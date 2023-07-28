@@ -5,8 +5,13 @@ Imports hdPlumbing
 Public Class Movie
     Public Property Id As Integer
     Public Property Title As String
+<<<<<<< HEAD
 	Public Property ReleaseDate As Date
 	Public Property Genre As String
+=======
+    Public Property ReleaseDate As Date
+    Public Property Genre As String
+>>>>>>> 6c126de44932f0a6182860d5b5ab9337a42d087b
     Public Property Director As String
     Public Property Description As String
 
@@ -117,6 +122,7 @@ Public Class MovieFactory
 	End Function
 
 	Private Shared Function PopulateRow(ByVal drow As DataRow) As Movie
+<<<<<<< HEAD
 		Dim obj = New Movie With {
 			.Id = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Id"),
 			.Title = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Title"),
@@ -125,6 +131,16 @@ Public Class MovieFactory
 			.Director = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Director"),
 			.Description = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Description")
 		}
+=======
+		Dim obj = New Movie()
+
+		obj.Id = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Id")
+		obj.Title = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Title")
+		obj.ReleaseDate = dbLibrary.ReplaceDBNullAndColumnExists(drow, "ReleaseDate")
+		obj.Genre = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Genre")
+		obj.Director = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Director")
+		obj.Description = dbLibrary.ReplaceDBNullAndColumnExists(drow, "Description")
+>>>>>>> 6c126de44932f0a6182860d5b5ab9337a42d087b
 
 		Return obj
 	End Function

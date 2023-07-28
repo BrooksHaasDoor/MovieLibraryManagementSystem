@@ -168,8 +168,12 @@ Partial Class MLMSForm
         ' 
         ' ReleaseDateTime
         ' 
+<<<<<<< HEAD
         ReleaseDateTime.CustomFormat = "yyyy"
         ReleaseDateTime.Format = DateTimePickerFormat.Custom
+=======
+        ReleaseDateTime.Format = DateTimePickerFormat.Short
+>>>>>>> 6c126de44932f0a6182860d5b5ab9337a42d087b
         ReleaseDateTime.Location = New Point(92, 41)
         ReleaseDateTime.Name = "ReleaseDateTime"
         ReleaseDateTime.Size = New Size(100, 23)

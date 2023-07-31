@@ -1,4 +1,5 @@
 ﻿Public Class MLMSForm
+    ' test git
     Private Sub MLMSForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Get movies from server
         Dim movies = MovieFactory.LoadAll

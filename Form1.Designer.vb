@@ -33,7 +33,7 @@ Partial Class MLMSForm
         DescriptionLbl = New Label()
         MovieTitleDataGrid = New DataGridView()
         MovieTitleCol = New DataGridViewTextBoxColumn()
-        AddMovieBtn = New Button()
+        AddBtn = New Button()
         SearchBtn = New Button()
         SearchLbl = New Label()
         SearchTxt = New TextBox()
@@ -133,14 +133,14 @@ Partial Class MLMSForm
         MovieTitleCol.Name = "MovieTitleCol"
         MovieTitleCol.Width = 350
         ' 
-        ' AddMovieBtn
+        ' AddBtn
         ' 
-        AddMovieBtn.Location = New Point(198, 12)
-        AddMovieBtn.Name = "AddMovieBtn"
-        AddMovieBtn.Size = New Size(75, 52)
-        AddMovieBtn.TabIndex = 5
-        AddMovieBtn.Text = "Add"
-        AddMovieBtn.UseVisualStyleBackColor = True
+        AddBtn.Location = New Point(198, 12)
+        AddBtn.Name = "AddBtn"
+        AddBtn.Size = New Size(75, 52)
+        AddBtn.TabIndex = 5
+        AddBtn.Text = "Add"
+        AddBtn.UseVisualStyleBackColor = True
         ' 
         ' SearchBtn
         ' 
@@ -195,7 +195,7 @@ Partial Class MLMSForm
         Controls.Add(SearchBtn)
         Controls.Add(SearchLbl)
         Controls.Add(SearchTxt)
-        Controls.Add(AddMovieBtn)
+        Controls.Add(AddBtn)
         Controls.Add(MovieTitleDataGrid)
         Controls.Add(DescriptionLbl)
         Controls.Add(DirectorLbl)
@@ -223,7 +223,7 @@ Partial Class MLMSForm
     Friend WithEvents DirectorLbl As Label
     Friend WithEvents DescriptionLbl As Label
     Friend WithEvents MovieTitleDataGrid As DataGridView
-    Friend WithEvents AddMovieBtn As Button
+    Friend WithEvents AddBtn As Button
     Friend WithEvents MovieTitleCol As DataGridViewTextBoxColumn
     Friend WithEvents SearchBtn As Button
     Friend WithEvents SearchLbl As Label

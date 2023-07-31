@@ -9,7 +9,7 @@
         Next
     End Sub
 
-    Private Sub AddMovieBtn_Click(sender As Object, e As EventArgs) Handles AddMovieBtn.Click
+    Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
         Dim textBoxes As Array = {MovieTitleTxt, ReleaseDateTime, GenreTxt, DirectorTxt, DescriptionTxt}
 
         For Each currentTextBox As Object In textBoxes

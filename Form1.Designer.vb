@@ -38,6 +38,7 @@ Partial Class MLMSForm
         SearchLbl = New Label()
         SearchTxt = New TextBox()
         ReleaseDateTime = New DateTimePicker()
+        DeleteBtn = New Button()
         CType(MovieTitleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -75,7 +76,7 @@ Partial Class MLMSForm
         MovieTitleLbl.Location = New Point(21, 15)
         MovieTitleLbl.Name = "MovieTitleLbl"
         MovieTitleLbl.Size = New Size(65, 15)
-        MovieTitleLbl.TabIndex = 9
+        MovieTitleLbl.TabIndex = 10
         MovieTitleLbl.Text = "Movie Title"
         ' 
         ' ReleaseYearLbl
@@ -84,7 +85,7 @@ Partial Class MLMSForm
         ReleaseYearLbl.Location = New Point(15, 44)
         ReleaseYearLbl.Name = "ReleaseYearLbl"
         ReleaseYearLbl.Size = New Size(71, 15)
-        ReleaseYearLbl.TabIndex = 10
+        ReleaseYearLbl.TabIndex = 11
         ReleaseYearLbl.Text = "Release Year"
         ' 
         ' GenreLbl
@@ -93,7 +94,7 @@ Partial Class MLMSForm
         GenreLbl.Location = New Point(45, 73)
         GenreLbl.Name = "GenreLbl"
         GenreLbl.Size = New Size(38, 15)
-        GenreLbl.TabIndex = 11
+        GenreLbl.TabIndex = 12
         GenreLbl.Text = "Genre"
         ' 
         ' DirectorLbl
@@ -102,7 +103,7 @@ Partial Class MLMSForm
         DirectorLbl.Location = New Point(34, 102)
         DirectorLbl.Name = "DirectorLbl"
         DirectorLbl.Size = New Size(49, 15)
-        DirectorLbl.TabIndex = 12
+        DirectorLbl.TabIndex = 13
         DirectorLbl.Text = "Director"
         ' 
         ' DescriptionLbl
@@ -111,7 +112,7 @@ Partial Class MLMSForm
         DescriptionLbl.Location = New Point(19, 131)
         DescriptionLbl.Name = "DescriptionLbl"
         DescriptionLbl.Size = New Size(67, 15)
-        DescriptionLbl.TabIndex = 13
+        DescriptionLbl.TabIndex = 14
         DescriptionLbl.Text = "Description"
         ' 
         ' MovieTitleDataGrid
@@ -124,7 +125,7 @@ Partial Class MLMSForm
         MovieTitleDataGrid.RowTemplate.Height = 28
         MovieTitleDataGrid.RowTemplate.ReadOnly = True
         MovieTitleDataGrid.Size = New Size(394, 168)
-        MovieTitleDataGrid.TabIndex = 8
+        MovieTitleDataGrid.TabIndex = 9
         ' 
         ' MovieTitleCol
         ' 
@@ -136,17 +137,17 @@ Partial Class MLMSForm
         ' 
         AddMovieBtn.Location = New Point(198, 12)
         AddMovieBtn.Name = "AddMovieBtn"
-        AddMovieBtn.Size = New Size(75, 139)
+        AddMovieBtn.Size = New Size(75, 52)
         AddMovieBtn.TabIndex = 5
-        AddMovieBtn.Text = "Add Movie"
+        AddMovieBtn.Text = "Add"
         AddMovieBtn.UseVisualStyleBackColor = True
         ' 
         ' SearchBtn
         ' 
-        SearchBtn.Location = New Point(198, 157)
+        SearchBtn.Location = New Point(198, 128)
         SearchBtn.Name = "SearchBtn"
-        SearchBtn.Size = New Size(75, 23)
-        SearchBtn.TabIndex = 7
+        SearchBtn.Size = New Size(75, 52)
+        SearchBtn.TabIndex = 8
         SearchBtn.Text = "Search"
         SearchBtn.UseVisualStyleBackColor = True
         ' 
@@ -156,7 +157,7 @@ Partial Class MLMSForm
         SearchLbl.Location = New Point(41, 160)
         SearchLbl.Name = "SearchLbl"
         SearchLbl.Size = New Size(42, 15)
-        SearchLbl.TabIndex = 14
+        SearchLbl.TabIndex = 15
         SearchLbl.Text = "Search"
         ' 
         ' SearchTxt
@@ -164,7 +165,7 @@ Partial Class MLMSForm
         SearchTxt.Location = New Point(92, 157)
         SearchTxt.Name = "SearchTxt"
         SearchTxt.Size = New Size(100, 23)
-        SearchTxt.TabIndex = 6
+        SearchTxt.TabIndex = 7
         ' 
         ' ReleaseDateTime
         ' 
@@ -173,13 +174,23 @@ Partial Class MLMSForm
         ReleaseDateTime.Location = New Point(92, 41)
         ReleaseDateTime.Name = "ReleaseDateTime"
         ReleaseDateTime.Size = New Size(100, 23)
-        ReleaseDateTime.TabIndex = 15
+        ReleaseDateTime.TabIndex = 1
+        ' 
+        ' DeleteBtn
+        ' 
+        DeleteBtn.Location = New Point(198, 70)
+        DeleteBtn.Name = "DeleteBtn"
+        DeleteBtn.Size = New Size(75, 52)
+        DeleteBtn.TabIndex = 6
+        DeleteBtn.Text = "Delete"
+        DeleteBtn.UseVisualStyleBackColor = True
         ' 
         ' MLMSForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(685, 192)
+        Controls.Add(DeleteBtn)
         Controls.Add(ReleaseDateTime)
         Controls.Add(SearchBtn)
         Controls.Add(SearchLbl)
@@ -218,4 +229,5 @@ Partial Class MLMSForm
     Friend WithEvents SearchLbl As Label
     Friend WithEvents SearchTxt As TextBox
     Friend WithEvents ReleaseDateTime As DateTimePicker
+    Friend WithEvents DeleteBtn As Button
 End Class

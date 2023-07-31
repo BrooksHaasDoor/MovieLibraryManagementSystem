@@ -26,13 +26,6 @@ Public Class Movie
 					.Parameters.Add("@genre", SqlDbType.NVarChar).Value = Me.Genre
 					.Parameters.Add("@director", SqlDbType.NVarChar).Value = Me.Director
 					.Parameters.Add("@description", SqlDbType.NVarChar).Value = Me.Description
-
-					' .Parameters.Add("@IsError", SqlDbType.Bit).Direction = ParameterDirection.Output
-					' .Parameters.Add("@ErrorNumber", SqlDbType.Int).Direction = ParameterDirection.Output
-					' .Parameters.Add("@ErrorState", SqlDbType.Int).Direction = ParameterDirection.Output
-					' .Parameters.Add("@ErrorProcedure", SqlDbType.VarChar, Int32.MaxValue).Direction = ParameterDirection.Output
-					' .Parameters.Add("@ErrorLine", SqlDbType.Int).Direction = ParameterDirection.Output
-					' .Parameters.Add("@ErrorMessage", SqlDbType.VarChar, Int32.MaxValue).Direction = ParameterDirection.Output
 				End With
 
 				cm.Transaction = TransHaas
@@ -46,28 +39,9 @@ Public Class Movie
 					ExecErrorMsg = ex.Message.ToString()
 				End Try
 
-				' SPerrorInfo.Clear()
-
-				' If SPerrorInfo.wasError(cm.Parameters("@IsError").Value) = True Or ExecError = True Then
-				' 	SPerrorInfo.Fill(cm, ExecErrorMsg)
-
-				' 	hdPlumbing.Logging.DiagLogFileWrite("SP Error in DoorColor.Save", "HaasCreate.txt", True)
-				' 	hdPlumbing.Logging.DiagLogFileWrite(SPerrorInfo.ToLogFile(), "HaasCreate.txt", True)
-				' 	hdPlumbing.Logging.DiagLogFileWrite(hdPlumbing.Logging.DiagLogFileWrite_SQLParms(cm), "HaasCreate.txt", True)
-
-				' 	If Me.ThrowOnError = True Then
-				' 		Err.Raise(921, SPerrorInfo.ToLogFile(), "Stored procedure error")
-				' 	Else
-				' 		RaiseEvent wasError(SPerrorInfo)
-				' 	End If
-				' 	TransHaas.Rollback()
-				' 	Return False
-				' Else
-
 				TransHaas.Commit()
 
 				Return True
-				'End If
 			End Using
 		End Using
 
@@ -84,9 +58,6 @@ Public Class MovieFactory
 				Dim da = New SqlDataAdapter()
 
 				cm.CommandType = CommandType.Text
-
-				' cm.Parameters.Add("@WorxName", SqlDbType.VarChar).Value = haasWorxName
-
 				da.SelectCommand = cm
 				cn.Open()
 				da.Fill(ds, "data")
